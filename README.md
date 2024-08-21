@@ -1,9 +1,16 @@
 # nvim-configs
 
-This repository contains my personal configuration files for my development workflow, focusing on:
+This repository contains my personal configuration files for my development workflow. Recently I realized the immediate benefits of an AI IDE such as Cursor, but could not replace the flows of nvim. Hence the configurations were ported over to Vscode/cursor settings.
+
+The contents of this repo focuses on:
+
+Under user settings
+
+- Cursor IDE
+
+under ~/.config/
 
 - Neovim
-- Cursor IDE
 - Yabai (window management for macOS)
 - SKHD (hotkey daemon for macOS)
 
@@ -11,8 +18,8 @@ These configs are tailored to enhance productivity and streamline my development
 
 ## Contents
 
+- Cursor settings.json and keybindings.json the mimicks nvim configs
 - Neovim configuration
-- VSCode settings
 - Yabai configuration
 - SKHD keybindings
 
