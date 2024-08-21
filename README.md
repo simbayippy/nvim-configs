@@ -1,8 +1,10 @@
 # nvim-configs
 
-This repository contains my personal configuration files for my development workflow. Recently I realized the immediate benefits of an AI IDE such as Cursor, but could not replace the flows of nvim. Hence the configurations were ported over to Vscode/cursor settings.
+This repository contains my personal configuration files for my development workflow.
 
-The contents of this repo focuses on:
+Recently I realized the immediate benefits of an AI IDE such as Cursor, but could not replace the flows of nvim.
+
+## Overview
 
 Under user settings
 
