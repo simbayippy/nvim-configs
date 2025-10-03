@@ -1,30 +1,26 @@
 {
-  "liveServer.settings.donotShowInfoMsg": true,
   "[python]": {
     "editor.formatOnType": true
   },
-  "tabnine.experimentalAutoImports": true,
   "editor.tabSize": 2,
   "editor.linkedEditing": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "typescript.updateImportsOnFileMove.enabled": "always",
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.formatOnPaste": true,
+  //   "editor.formatOnSave": true
+  // },
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "githubPullRequests.pullBranch": "never",
-  "editor.formatOnSave": true,
-  "prisma.showPrismaDataPlatformNotification": false,
+  // "editor.formatOnSave": true,
   "editor.fontFamily": "MesloLGS Nerd Font Mono",
-  "github.copilot.editor.enableAutoCompletions": false,
-  "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
-
-  // for finding contents in file
+  "cursor.cpp.disabledLanguages": [
+    "plaintext",
+    "markdown",
+    "scminput"
+  ],
   "find-it-faster.general.useTerminalInEditor": true,
   "find-it-faster.general.killTerminalAfterUse": true,
-
   "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -38,116 +34,273 @@
     "<C-h>": false,
     "<C-j>": false,
     "<C-k>": false,
-    "<C-l>": false
+    "<C-l>": false,
   },
-
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // allows indenting in visual mode
+    {
+      "before": [
+        "<Tab>"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<S-Tab>"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
-    // window management
+    // // allowing indenting when in vim mode
+    // {
+    //   "before": ["<Tab>"],
+    //   "commands": ["editor.action.indentLines"]
+    // },
+    // {
+    //   "before": ["<S-Tab>"],
+    //   "commands": ["editor.action.outdentLines"]
+    // },
+    // custom panel stuff
     {
-      "before": ["<leader>", "s", "v"],
-      "commands": ["workbench.action.splitEditorRight"]
+      "before": [
+        "<leader>",
+        "s",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditorRight"
+      ]
     },
     {
-      "before": ["<leader>", "s", "h"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "before": [
+        "<leader>",
+        "s",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
     },
     {
-      "before": ["<leader>", "s", "e"],
-      "commands": ["workbench.action.evenEditorWidths"]
+      "before": [
+        "<leader>",
+        "s",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.evenEditorWidths"
+      ]
     },
     {
-      "before": ["<leader>", "s", "x"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<leader>",
+        "s",
+        "x"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
-
-    // finding stuff
     {
-      "before": ["<leader>", "f", "f"],
-      // "commands": ["workbench.action.quickOpen"],
-      "commands": ["find-it-faster.findFiles"],
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "find-it-faster.findFiles"
+      ],
       "silent": true
     },
     {
-      "before": ["<leader>", "f", "r"],
-      "commands": ["workbench.action.openRecent"],
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.openRecent"
+      ],
       "silent": true
     },
     {
-      "before": ["<leader>", "f", "s"],
-      "commands": ["find-it-faster.findWithinFiles"],
+      "before": [
+        "<leader>",
+        "f",
+        "s"
+      ],
+      "commands": [
+        "find-it-faster.findWithinFiles"
+      ],
       "silent": true
     },
     {
-      "before": ["<leader>", "f", "c"],
+      "before": [
+        "<leader>",
+        "f",
+        "c"
+      ],
       "commands": [
         "editor.action.addSelectionToNextFindMatch",
         "workbench.action.findInFiles"
       ],
       "silent": true
     },
-
-    // toggle file explorer
     {
-      "before": ["<leader>", "e", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "before": [
+        "<leader>",
+        "e",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ],
       "silent": true
     },
     {
-      "before": ["<leader>", "e", "f"],
-      "commands": ["workbench.files.action.showActiveFileInExplorer"],
+      "before": [
+        "<leader>",
+        "e",
+        "f"
+      ],
+      "commands": [
+        "workbench.files.action.showActiveFileInExplorer"
+      ],
       "silent": true
     },
     {
-      "before": ["<leader>", "e", "c"],
-      "commands": ["workbench.files.action.collapseExplorerFolders"],
+      "before": [
+        "<leader>",
+        "e",
+        "c"
+      ],
+      "commands": [
+        "workbench.files.action.collapseExplorerFolders"
+      ],
       "silent": true
     },
     {
-      "before": ["<leader>", "e", "r"],
-      "commands": ["workbench.files.action.refreshFilesExplorer"],
+      "before": [
+        "<leader>",
+        "e",
+        "r"
+      ],
+      "commands": [
+        "workbench.files.action.refreshFilesExplorer"
+      ],
       "silent": true
     },
-
-    // toggle terminal
     {
-      "before": ["<leader>", "t", "t"],
-      "commands": ["workbench.action.togglePanel"]
-    },
-
-    // misc
-    {
-      "before": ["<A-Up>"],
-      "commands": ["editor.action.moveLinesUpAction"]
-    },
-    {
-      "before": ["<A-Down>"],
-      "commands": ["editor.action.moveLinesDownAction"]
-    },
-    {
-      "before": ["<leader>", "n", "h"],
-      "commands": [":nohl"],
+      "before": [
+        "<leader>",
+        "e",
+        "g"
+      ],
+      "commands": [
+        "workbench.view.scm"
+      ],
       "silent": true
-    }
+    },
+    {
+      "before": [
+        "<leader>",
+        "t",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.togglePanel"
+      ]
+    },
+    {
+      "before": [
+        "<A-Up>"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
+    },
+    {
+      "before": [
+        "<A-Down>"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "h"
+      ],
+      "commands": [
+        ":nohl"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        {
+          "command": "editor.action.goToReferences"
+        }
+      ]
+    },
   ],
-
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
     {
-      "before": ["<A-Up>"],
-      "commands": ["editor.action.moveLinesUpAction"],
+      "before": [
+        "<A-Up>"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ],
       "silent": true
     },
     {
-      "before": ["<A-Down>"],
-      "commands": ["editor.action.moveLinesDownAction"],
+      "before": [
+        "<A-Down>"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ],
       "silent": true
-    }
+    },
   ],
-
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
-  }
+  },
+  "editor.semanticTokenColorCustomizations": {
+    // comment out to apply specifically to cursor dark only 
+    // "[Cursor Dark]": {
+    "rules": {
+      "namespace:go": "#A5C261",
+      "module:go": "#A5C261",
+      "package:go": "#A5C261"
+    }
+    // }
+  },
+  "workbench.colorTheme": "Cursor Dark",
+  "AI.toolcall.confirmMode": "autoRun",
+  "terminal.integrated.allowChords": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "vscode-live2d.English": true,
+  "go.toolsManagement.autoUpdate": true,
 }
